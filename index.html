@@ -156,8 +156,24 @@ for(let i=0;i<20;i++){
 <script>
 function playMusic(){
     document.getElementById("shehnai").play();
+
+
+    function shareInvite(){
+    const shareData = {
+        title: "दिलीप ❤️ सोनाक्षी | शुभ विवाह",
+        text: "आप सादर आमंत्रित हैं 💍\nतिलक: 29 अप्रैल\nविवाह: 05 मई",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData);
+    } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert("Link copy हो गया 👍");
+    }
 }
 </script>
 
 </body>
 </html>
+
