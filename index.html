@@ -38,7 +38,7 @@ body{
 }
 
 .fade{opacity:0;animation:fadeUp 1s ease forwards;}
-.d1{animation-delay:.4s}.d2{animation-delay:1s}.d3{animation-delay:1.8s}.d4{animation-delay:2.6s}.d5{animation-delay:3.4s}.d6{animation-delay:4.2s}
+.d1{animation-delay:.4s}.d2{animation-delay:1s}.d3{animation-delay:1.8s}.d4{animation-delay:2.6s}.d5{animation-delay:3.4s}
 
 .ganesh{font-size:36px}
 h1{font-size:30px;color:#8b0000}
@@ -52,29 +52,28 @@ h1{font-size:30px;color:#8b0000}
 
 .countdown{font-size:18px;font-weight:bold;background:#8b0000;color:#fff;padding:10px;border-radius:12px;margin:12px 0;}
 
-/* Floating Instagram style share button */
+/* Floating Instagram style share button always visible */
 .share-btn{
     position:fixed;
-    bottom:20px;
+    bottom:25px;
     left:50%;
     transform:translateX(-50%);
-    z-index:1000;
+    z-index:9999;
     display:inline-block;
     background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    color: #fff;
-    padding:16px 28px;
+    color:#fff;
+    padding:18px 32px;
     border-radius:50px;
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
     border:none;
     cursor:pointer;
-    box-shadow:0 0 25px rgba(255,255,255,0.6);
-    animation:glow 2.5s infinite;
+    box-shadow:0 0 30px rgba(255,255,255,0.8);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .share-btn:hover{
     transform:translateX(-50%) scale(1.05);
-    box-shadow:0 0 35px rgba(255,255,255,0.8);
+    box-shadow:0 0 40px rgba(255,255,255,1);
 }
 .share-btn:active{
     transform:translateX(-50%) scale(0.95);
@@ -128,8 +127,8 @@ for(let i=0;i<20;i++){
 
 <div class="footer fade d5">सपरिवार आपकी गरिमामयी उपस्थिति एवं शुभ आशीर्वाद प्रार्थनीय है।</div>
 
-<!-- 📤 Floating Instagram Style Share Button -->
-<button class="share-btn fade d6" onclick="shareInvite()">📤 निमंत्रण साझा करें</button>
+<!-- 📤 Floating Instagram Style Share Button always visible -->
+<button class="share-btn" onclick="shareInvite()">📤 निमंत्रण साझा करें</button>
 
 </div>
 
