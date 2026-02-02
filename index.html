@@ -51,24 +51,24 @@ h1{font-size:30px;color:#8b0000}
 .footer{font-size:16px;color:#6a2a0c}
 
 .countdown{font-size:18px;font-weight:bold;background:#8b0000;color:#fff;padding:10px;border-radius:12px;margin:12px 0;}
-}
-    .share-btn{
-    margin:18px auto 5px;
+
+.share-btn{
+    margin:18px auto;
     display:inline-block;
-    background:linear-gradient(135deg,#8b0000,#d4af37);
-    color:white;
+    background: linear-gradient(135deg, #FFD700, #FF4500);
+    color: #5a0000;
     padding:12px 22px;
     border-radius:30px;
     font-size:18px;
     font-weight:bold;
-    border:none;
+    border:2px solid #fff3e0;
     cursor:pointer;
-    box-shadow:0 0 15px rgba(212,175,55,.8);
+    box-shadow:0 0 20px rgba(255,215,0,0.9);
     animation:glow 2.5s infinite;
+    position:relative;
+    z-index:1000 !important;
 }
-.share-btn:active{
-    transform:scale(0.95);
-}
+.share-btn:active{transform:scale(0.95);}
 </style>
 </head>
 
@@ -105,30 +105,26 @@ for(let i=0;i<20;i++){
 <!-- 🕯️ Tilak Section -->
 <div class="event fade d4">
 <b>🕯️ तिलक समारोह</b><br>
-<span class="date">📅 29 अप्रैल</span><br>
-
+<span class="date">📅 29 अप्रैल</span>
 </div>
 
 <!-- 💍 Wedding Section -->
 <div class="event fade d4">
 <b>💍 विवाह समारोह</b><br>
-<span class="date">📅 05 मई</span><br>
-
+<span class="date">📅 05 मई</span>
 </div>
 
 <div class="divider fade d4"></div>
 
 <div class="footer fade d5">सपरिवार आपकी गरिमामयी उपस्थिति एवं शुभ आशीर्वाद प्रार्थनीय है।</div>
 
-<button class="share-btn fade d6" style="position:relative;z-index:10;" onclick="shareInvite()">📤 निमंत्रण साझा करें</button>
-
-<div class="qr fade d6">
-<img id="qr" src="">
-</div>
+<!-- 📤 Share Button -->
+<button class="share-btn fade d6" onclick="shareInvite()">📤 निमंत्रण साझा करें</button>
 
 </div>
 
 <script>
+/* Countdown to 5 May */
 const weddingDate=new Date("May 5, 2026 00:00:00").getTime();
 setInterval(()=>{
  const now=new Date().getTime();
@@ -141,30 +137,19 @@ setInterval(()=>{
  }
 },1000);
 
+/* Share function */
 function shareInvite(){
-    const shareData = {
-        title: "दिलीप ❤️ सोनाक्षी | शुभ विवाह",
-        text: "आप सादर आमंत्रित हैं 💍\nतिलक: 29 अप्रैल\nविवाह: 05 मई",
-        url: window.location.href
-    };
-
-    if (navigator.share) {
-        navigator.share(shareData);
-    } else {
-        navigator.clipboard.writeText(window.location.href);
-        alert("Link copy हो गया 👍");
-    }
+ if(navigator.share){
+  navigator.share({
+   title:"Dilip ❤️ Sonakshi Wedding",
+   text:"आप सादर आमंत्रित हैं 💍\nदिलीप कुमार ❤️ सोनाक्षी राज\nविवाह: 05 मई",
+   url:window.location.href
+  });
+ }else{
+  alert("Share supported नहीं है, link copy करें 🙏");
+ }
 }
-
-
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
