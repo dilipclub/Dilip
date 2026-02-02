@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>शुभ विवाह</title>
+<title>दिलीप ❤️ सोनाक्षी | शुभ विवाह</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 
@@ -11,35 +11,32 @@
 body{
     margin:0;
     font-family:'Tiro Devanagari Hindi', serif;
-    background:radial-gradient(circle at top, #7a0000, #3b0000);
+    background:radial-gradient(circle at top,#7a0000,#3b0000);
     color:#fff3e0;
     text-align:center;
     overflow-x:hidden;
 }
 
-/* Fade animation */
+/* Animations */
 @keyframes fadeUp{
     from{opacity:0; transform:translateY(25px);}
     to{opacity:1; transform:translateY(0);}
 }
-
-/* Glow */
 @keyframes glow{
-    0%{box-shadow:0 0 15px rgba(255,215,120,0.4);}
-    50%{box-shadow:0 0 35px rgba(255,215,120,0.9);}
-    100%{box-shadow:0 0 15px rgba(255,215,120,0.4);}
+    0%{box-shadow:0 0 15px rgba(255,215,120,.4);}
+    50%{box-shadow:0 0 35px rgba(255,215,120,.9);}
+    100%{box-shadow:0 0 15px rgba(255,215,120,.4);}
 }
-
-/* Flower falling */
 @keyframes fall{
-    0%{transform:translateY(-10vh) rotate(0deg); opacity:1;}
-    100%{transform:translateY(110vh) rotate(360deg); opacity:0.8;}
+    0%{transform:translateY(-10vh) rotate(0deg);}
+    100%{transform:translateY(110vh) rotate(360deg);}
 }
 
+/* Flowers */
 .flower{
     position:fixed;
     top:-10vh;
-    font-size:20px;
+    font-size:18px;
     animation:fall linear infinite;
     pointer-events:none;
 }
@@ -47,26 +44,26 @@ body{
 /* Card */
 .card{
     max-width:420px;
-    margin:25px auto;
+    margin:24px auto;
     background:linear-gradient(180deg,#fff4e6,#ffe1b3);
     color:#5a1a01;
     border-radius:20px;
     padding:26px 22px;
     border:4px solid #d4af37;
-    animation:fadeUp 1.5s ease, glow 3s infinite;
+    animation:fadeUp 1.4s ease, glow 3s infinite;
 }
 
 /* Sequential fade */
 .fade{opacity:0; animation:fadeUp 1s ease forwards;}
-.d1{animation-delay:0.5s;}
-.d2{animation-delay:1.2s;}
-.d3{animation-delay:2s;}
-.d4{animation-delay:2.8s;}
-.d5{animation-delay:3.6s;}
+.d1{animation-delay:.4s}
+.d2{animation-delay:1s}
+.d3{animation-delay:1.8s}
+.d4{animation-delay:2.6s}
+.d5{animation-delay:3.4s}
 
-.ganesh{font-size:38px;}
-h1{color:#8b0000; font-size:30px;}
-.names{font-size:26px; font-weight:bold; line-height:1.5;}
+.ganesh{font-size:36px}
+h1{font-size:30px;color:#8b0000}
+.names{font-size:26px;font-weight:bold;line-height:1.5}
 
 .event{
     background:#ffebc4;
@@ -75,8 +72,7 @@ h1{color:#8b0000; font-size:30px;}
     margin:12px 0;
     font-size:18px;
 }
-
-.date{font-size:20px; font-weight:bold; color:#9c2f00;}
+.date{font-size:20px;font-weight:bold;color:#9c2f00}
 
 .divider{
     width:80%;
@@ -84,8 +80,7 @@ h1{color:#8b0000; font-size:30px;}
     background:#d4af37;
     margin:15px auto;
 }
-
-.footer{font-size:16px; color:#6a2a0c;}
+.footer{font-size:16px;color:#6a2a0c}
 
 /* Music button */
 .music-btn{
@@ -103,15 +98,15 @@ h1{color:#8b0000; font-size:30px;}
 
 <body>
 
-<!-- 🌸 Flowers -->
+<!-- 🌸 Flower generator -->
 <script>
-for(let i=0;i<18;i++){
+for(let i=0;i<20;i++){
     let f=document.createElement("div");
     f.className="flower";
     f.innerHTML="🌸";
     f.style.left=Math.random()*100+"vw";
     f.style.animationDuration=(6+Math.random()*6)+"s";
-    f.style.fontSize=(14+Math.random()*16)+"px";
+    f.style.fontSize=(14+Math.random()*18)+"px";
     document.body.appendChild(f);
 }
 </script>
